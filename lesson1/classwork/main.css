@@ -1,0 +1,18 @@
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.title, h2 {
+    color: #b00000;
+}
+
+p, ol {
+    font-size: 18px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
