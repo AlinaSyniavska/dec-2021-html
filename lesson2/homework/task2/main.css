@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    background: #892726;
+    color: #F8EDD5;
+}
+
+.grey, .blue {
+    box-sizing: border-box;
+}
+
+.grey {
+    background: #C0C0C0;
+    padding: 20px 15px;
+}
+
+.blue {
+    background: #6395EC;
+    padding: 40px 0;
+}
+
+.one {
+    width: 200px;
+    height: 200px;
+    background: #6BBA67;
+}
+
+.two {
+    width: 200px;
+    height: 200px;
+    background: #8886AB;
+    border-radius: 20px;
+}
