@@ -1,0 +1,44 @@
+body {
+    background: #252525;
+}
+
+.container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 200px;
+}
+
+.button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-radius: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.style_one {
+    color: #FF6E1D;
+    border: 5px solid #FF6E1D;
+}
+
+.style_two {
+    color: #2BFDF0;
+    border: 5px solid #2BFDF0;
+}
+
+.style_three {
+    color: #FF54A6;
+    border: 5px solid #FF54A6;
+}
+
+.style_four {
+    color: #FF3E3E;
+    border: 5px solid #FF3E3E;
+}
