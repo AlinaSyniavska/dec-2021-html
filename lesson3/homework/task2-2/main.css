@@ -1,0 +1,39 @@
+.wrap {
+    width: 60%;
+    margin: 0 20% 0 20%;
+}
+
+.widget_top, .widget_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2269BB;
+    color: #fff;
+}
+
+.widget_top {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.widget_middle {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: 32%;
+    background: #16457A;
+
+    line-height: 200px;
+    vertical-align: center;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.widget_bottom {
+    height: 400px;
+    margin-top: 20px;
+}

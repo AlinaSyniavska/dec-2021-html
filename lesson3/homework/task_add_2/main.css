@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.wrap {
+    margin: 0 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 100px;
+    background: #0C65A7;
+    box-sizing: border-box;
+    border-bottom: 1px solid #7BCDE3;
+}
+
+.nav {
+    height: 70px;
+    background: #124B78;
+}
+
+.middle {
+    display: flex;
+    height: 500px;
+}
+
+.main {
+    background: #16A2C5;
+    width: 75%;
+}
+
+.aside {
+    background: #5275AD;
+    width: 25%;
+}
+
+.footer {
+    height: 70px;
+    background: #7BCDE3;
+}

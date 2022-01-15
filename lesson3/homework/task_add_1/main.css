@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.wrap {
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid #A2A2A2;
+    border-radius: 20px;
+}
+
+.block {
+    background: #D9D9D9;
+    color: #A6A6A6;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_a {
+    height: 200px;
+}
+
+.blocks {
+    display: flex;
+    height: 400px;
+    margin-top: 10px;
+}
+
+.block_b {
+    flex-grow: 3;
+    margin-right: 10px;
+}
+
+.block_c {
+    flex-grow: 1;
+}
