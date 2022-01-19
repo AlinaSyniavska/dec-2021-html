@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 60%;
+    margin: 50px 0;
+}
+
+.container_inner {
+    width: 80%;
+    margin: 2% 0;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    border: 2px solid #3bc6ea;
+}
+
+.menu > a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #122d3f;
+    font-weight: bold;
+}
+
+.card2 {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.buttons {
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+    border-top: 2px solid #3bc6ea;
+
+}
+
+.button_rect {
+    width: 40px;
+    height: 15px;
+}
+
+.button-circle {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.footer {
+    width: 25%;
+    margin: 5% 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid #3bc6ea;;
+    column-gap: 10px;
+}
+
+.footer__block {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------*/
+
+.bg-dark {
+    background: #122d3f;
+}
+
+.bg-grey {
+    background: #ced8e1;
+}
+
+.bg-blue {
+    background: #3bc6ea;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.w50per {
+    width: 50%;
+}
+
+.w80per {
+    width: 80%;
+}
+
+.h35 {
+    height: 35px;
+}
+
+.h50 {
+    height: 50px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.radius10 {
+    border-radius: 10px
+}
+
+.radius30 {
+    border-radius: 30px;
+}
+
+.radius-circle {
+    border-radius: 50%;
+}
+
+.border-blue {
+    border: 2px solid #3bc6ea;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-dark {
+    color: #122d3f;
+}
+
+.text-grey {
+    color: #ced8e1;
+}
+
+.text-blue {
+    color: #3bc6ea;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.margin-top10 {
+    margin-top: 10px;
+}
+
+.margin-left25 {
+    margin-left: 25px;
+}
+
+.margin-top50 {
+    margin-top: 50px;
+}
+
+.margin-bottom50 {
+    margin-bottom: 50px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /*column-gap: 3%;*/
+    row-gap: 15px;
+}
+
+.d-flex_se {
+    justify-content: space-evenly;
+}
+
+.d-flex_sb {
+    justify-content: space-between;
+}
+
+.d-flex_c {
+    justify-content: center;
+}
+
+.flex-dir_col {
+    flex-direction: column;
+}
+
+
+
+
