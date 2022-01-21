@@ -1,0 +1,199 @@
+.back {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #f4433f;
+}
+
+.wrap {
+    width: 60%;
+}
+
+.header {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5vh 5vh 0 5vh;
+}
+
+.hero {
+    width: 100%;
+    margin: 10vh 0 20vh 0;
+}
+
+.hero__block {
+    position: relative;
+}
+
+.hero__button {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.destinations {
+    width: 100%;
+    margin: 5vh 0 5vh 0;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.main-content__strip {
+    width: 100%;
+}
+
+.strip__block1 {
+    width: 31%;
+    height: 200px;
+}
+
+.strip__block2 {
+    width: 65%;
+    height: 200px;
+}
+
+.offers {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5vh 5vh 0 5vh;
+    margin-bottom: 5vh;
+}
+
+.card {
+    width: 100%;
+}
+
+.card__img {
+    width: 30%;
+    height: 150px;
+}
+
+.card__info {
+    width: 60%;
+}
+
+.info-el {
+    margin-bottom: 10px;
+}
+
+.info-el:last-child {
+    margin-top: 30px;
+}
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5vh;
+}
+
+.footer__contact {
+    width: 22%;
+}
+
+.footer__circle {
+    width: 40px;
+    height: 40px;
+}
+
+.last {
+    height: 180px;
+}
+
+/*-------------*/
+.bg-base-grey {
+    background: #dadfe3;
+}
+
+.bg-dark-grey {
+    background: #aeb3b8;
+}
+
+.bg-light-grey {
+    background: #c3c8cc;
+}
+
+.bg-white {
+    background: white;
+}
+
+.radius5 {
+    border-radius: 5px;
+}
+
+.radius10 {
+    border-radius: 10px;
+}
+
+.radius30 {
+    border-radius: 30px;
+}
+
+.radius-circle {
+    border-radius: 50%;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.w40per {
+    width: 40%;
+}
+
+.w50per {
+    width: 50%;
+}
+
+.w70per {
+    width: 70%;
+}
+
+.h20 {
+    height: 20px;
+}
+
+.h40 {
+    height: 40px;
+}
+
+.h60 {
+    height: 60px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.d-flex {
+    display: flex;
+    row-gap: 3vh;
+    column-gap: 3vh;
+
+    align-items: center;
+}
+
+.flex-dir_col {
+    flex-direction: column;
+}
+
+.d-flex_c {
+    justify-content: center;
+}
+
+.d-flex_se {
+    justify-content: space-evenly;
+}
+
+.d-flex_sb {
+    justify-content: space-between;
+}
+
+.d-fl-ai_str {
+    align-items: flex-start;
+}
+
+.fl-wrap {
+    flex-wrap: wrap;
+}
