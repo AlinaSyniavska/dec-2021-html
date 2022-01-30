@@ -12,22 +12,85 @@
           rel="stylesheet">
     <link rel="stylesheet" href="css/normal.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <title>Sprig</title>
 </head>
 <body>
-<div class="temp-body d-flex fl-dir_col jst-content_c align-it_c">
-    <header class="header wrap1 d-flex jst-content_sb align-it_c">
+<div class="temp-body d-flex fl-dir_col">
+    <header class="header wrap1 d-flex">
+        <div class="mobile">
+            <!-- Верхний слой -->
+            <div id="myNav" class="overlay">
+                <!-- Кнопка для закрытия навигации наложения -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- Верхний слой содержимого -->
+                <div class="overlay-content">
+                    <nav class="header__nav f-sz16">
+                        <ul class="navbar d-flex">
+                            <li class="navbar__item"><a href="#">Why Sprig?</a></li>
+                            <li class="navbar__item">
+                                <a href="#">Customers<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="#">item 1</a>
+                                    <a href="#">item 2</a>
+                                    <a href="#">item 3</a>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#">Resources<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="#">item 1</a>
+                                    <a href="#">item 2</a>
+                                </div>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#">Product<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    <a href="#">item 1</a>
+                                    <a href="#">item 2</a>
+                                </div>
+                            </li>
+                            <li class="navbar__item"><a href="#">Plans</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Используйте любой элемент для открытия / отображения меню навигации наложения -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+
         <div class="header__logo"><img src="images/sprig_logo.svg" alt="sprig logo"></div>
 
-        <nav class="header__nav f-sz16 d-flex jst-content_sb">
-            <a href="#">Why Sprig?</a>
-            <a class="ch-mark" href="#">Product</a>
-            <a class="ch-mark" href="#">Customers</a>
-            <a class="ch-mark" href="#">Resources</a>
-            <a href="#">Plans</a>
+        <nav class="header__nav f-sz16 desktop">
+            <ul class="navbar d-flex">
+                <li class="navbar__item"><a href="#">Why Sprig?</a></li>
+                <li class="navbar__item">
+                    <a href="#">Customers<i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">item 1</a>
+                        <a href="#">item 2</a>
+                        <a href="#">item 3</a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <a href="#">Resources<i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">item 1</a>
+                        <a href="#">item 2</a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <a href="#">Product<i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">item 1</a>
+                        <a href="#">item 2</a>
+                    </div>
+                </li>
+                <li class="navbar__item"><a href="#">Plans</a></li>
+            </ul>
         </nav>
 
-        <div class="header__btn d-flex jst-content_sb align-it_c">
+        <div class="header__btn d-flex desktop">
             <div class="btn-anchor f-sz16 d-flex jst-content_sb">
                 <a href="#">Sign In</a>
                 <a href="#">Talk to Sales</a>
@@ -35,6 +98,13 @@
             <button class="btn-start bnt_hover f-sz16 d-flex jst-content_c align-it_c">Start for Free</button>
         </div>
     </header>
+    <div class="fl-mobile header__btn wrap1">
+        <div class="btn-anchor f-sz16 d-flex jst-content_sb">
+            <a href="#">Sign In</a>
+            <a href="#">Talk to Sales</a>
+        </div>
+        <button class="btn-start bnt_hover f-sz16 d-flex jst-content_c align-it_c">Start for Free</button>
+    </div>
 
     <main class="main d-flex fl-dir_col">
         <section class="section1 wrap2 d-flex jst-content_sb">
@@ -48,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="section1__img parent">
+            <div class="section1__img parent desktop">
                 <img src="images/orange_rect.png" alt="background">
                 <img class="child" src="images/top-orange_rect.png" alt="top background">
             </div>
@@ -56,7 +126,7 @@
 
         <section class="section2 d-flex fl-dir_col align-it_c">
             <h2 class="section2__title f-sz42">Trusted by the world's most innovative companies</h2>
-            <div class="section2__logos d-flex jst-content_c align-it_c">
+            <div class="section2__logos d-flex">
                 <img src="images/lg-square.png" alt="logo company">
                 <img src="images/lg-code_cademy.png" alt="logo company">
                 <img src="images/lg-dropbox.png" alt="logo company">
@@ -77,7 +147,7 @@
 
         <section class="section3 d-flex jst-content_c">
             <div class="wrap1 d-flex">
-                <div class="section3__img"><img src="images/biker.png" alt="man on a bike"></div>
+                <div class="section3__img desktop"><img src="images/biker.png" alt="man on a bike"></div>
                 <div class="section3__content d-flex fl-dir_col jst-content_c">
                     <h3 class="section3__title f-sz34">Modern product teams move fast, but learning from customers takes
                         a ton of time, effort, and energy.</h3>
@@ -92,12 +162,14 @@
                 <h3 class="section4__title f-sz34">Sprig makes it possible to obtain qualitative insights at the speed
                     and scale of analytics</h3>
                 <div class="section4__img"><img src="images/analytics.png" alt="table analytics"></div>
-                <button class="s1-btn-start bnt_hover f-sz16">Start for Free</button>
+                <div class="btn-mobile">
+                    <button class="s1-btn-start bnt_hover f-sz16">Start for Free</button>
+                </div>
             </div>
         </section>
 
         <section class="section5 wrap2 parent d-flex">
-            <div class="child"><img src="images/top-purple_rect.png" alt="top background"></div>
+            <div class="child desktop"><img src="images/top-purple_rect.png" alt="top background"></div>
             <div class="section5__content d-flex fl-dir_col">
                 <h2 class="f-sz42">Target your actual users during key moments throughout their product journey.</h2>
                 <p class="f-sz17">Get 30% higher response rates by asking your customers hyper-relevant questions based
@@ -124,9 +196,11 @@
                             surface user insights via in-product, email, or link microsurveys to improve your product
                             and
                             acquisition funnels.</p>
-                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c">Learn More</button>
+                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c btn-mobile">Learn
+                            More
+                        </button>
                     </div>
-                    <div class="card_right">
+                    <div class="card_right desktop">
                         <img src="images/IMAGE_chat.png" alt="">
                     </div>
                 </div>
@@ -140,13 +214,14 @@
                             interviews anytime, anywhere in order to validate ideas and build a roadmap your customers
                             will
                             love.</p>
-                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c">Learn More</button>
+                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c btn-mobile">Learn
+                            More
+                        </button>
                     </div>
-                    <div class="card_right">
+                    <div class="card_right desktop">
                         <img src="images/IMAGE_video.png" alt="">
                     </div>
                 </div>
-
 
                 <div class="card d-flex jst-content_sb">
                     <div class="card_left">
@@ -158,10 +233,10 @@
                             and remote concept testing to ensure your new concept, design, and messaging hit the
                             mark by
                             collecting feedback from your customers before launch.</p>
-                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c">Learn More
+                        <button class="card__btn bnt_hover f-sz16 d-flex jst-content_c align-it_c btn-mobile">Learn More
                         </button>
                     </div>
-                    <div class="card_right">
+                    <div class="card_right desktop">
                         <img src="images/IMAGE_testing.png" alt="">
                     </div>
                 </div>
@@ -172,8 +247,6 @@
                 <button class="btn-card bnt_hover">Video Questions</button>
                 <button class="btn-card bnt_hover">Concept Testing</button>
             </div>
-
-
         </section>
 
         <section class="section8 d-flex fl-dir_col">
@@ -183,7 +256,7 @@
             </div>
 
             <div class="section8_bottom d-flex jst-content_sb">
-                <div class="section8__img"><img src="images/arrows.png" alt="target"></div>
+                <div class="section8__img desktop"><img src="images/arrows.png" alt="target"></div>
                 <div class="section8__accordion">
                     <div class="accordion-block">
                         <div class="accordion__header d-flex jst-content_sb">
@@ -228,12 +301,12 @@
                 <p class="section9__txt f-sz17">Connect events and attributes from other platforms to ensure you’re
                     asking the right customers the right questions. Then share your findings with apps like Slack and
                     Zendesk to get a comprehensive view of your users' behaviors.</p>
-                <div>
+                <div class="btn-mobile">
                     <button class="s1-btn-start bnt_hover f-sz16">See All Integrations</button>
                 </div>
             </div>
 
-            <div class="section9__img">
+            <div class="section9__img desktop">
                 <img src="images/logos.png" alt="background">
             </div>
         </section>
@@ -246,7 +319,7 @@
 
                     <p class="section10__txt f-sz17">Sprig helps product and research teams ensure user insights fuel
                         every product decision.</p>
-                    <div>
+                    <div class="btn-mobile">
                         <button class="s1-btn-start bnt_hover f-sz16">Read More</button>
                     </div>
                 </div>
@@ -270,26 +343,27 @@
     </main>
 
     <footer class="footer d-flex fl-dir_col align-it_c">
-        <div class="f-sec1 wrap1 d-flex jst-content_c">
-            <div class="footer__content d-flex fl-dir_col align-it_c">
+        <div class="f-sec1 wrap1 d-flex">
+            <div class="footer__content d-flex fl-dir_col">
                 <div>
                     <h2 class="f-sz42">Launch a Sprig within minutes.</h2>
                     <h2 class="f-sz42">See insights within hours.</h2>
                 </div>
                 <p class="f-sz17">Create your free account to conduct video interviews, test designs, and survey
                     specific users within your product, on your website, and more.</p>
-                <div>
+                <div class="btn-mobile">
                     <button class="s1-btn-start f-bnt_hover f-sz16">Start for Free</button>
                 </div>
             </div>
         </div>
 
         <div class="f-sec2 wrap1 d-flex">
-            <div class="footer__logo">
+            <div class="footer__logo desktop">
                 <img src="images/sprig_logo_transparent.svg" alt="sprig logo">
             </div>
+
             <div class="footer__contacts d-flex fl-dir_col">
-                <div class="footer__anchors d-flex">
+                <div class="footer__anchors d-flex desktop">
                     <div class="anchor-block f-sz16 d-flex fl-dir_col">
                         <h6 class="f-sz16">Product</h6>
                         <a href="#">Microsurveys</a>
@@ -331,6 +405,56 @@
                     </div>
                 </div>
 
+                <div class="footer__anchors mobile">
+                    <button class="collapsible">Product</button>
+                    <div class="content">
+                        <div class="anchor-block f-sz16 d-flex fl-dir_col">
+                            <a href="#">Microsurveys</a>
+                            <a href="#">Video Questions</a>
+                            <a href="#">Concept Testing</a>
+                            <a href="#">Contextual Targeting</a>
+                            <a href="#">Text Analysis</a>
+                            <a href="#">Integrations</a>
+                            <a href="#">Plans</a>
+                        </div>
+                    </div>
+
+                    <button class="collapsible">Customer Stories</button>
+                    <div class="content">
+                        <div class="anchor-block f-sz16 d-flex fl-dir_col">
+                            <a href="#">Square</a>
+                            <a href="#">Codecademy</a>
+                            <a href="#">Nova Credit</a>
+                            <a href="#">Chipper</a>
+                            <a href="#">Plann</a>
+                            <a href="#">ProGuides</a>
+                            <a href="#">Shift</a>
+                        </div>
+                    </div>
+
+                    <button class="collapsible">Company</button>
+                    <div class="content">
+                        <div class="anchor-block f-sz16 d-flex fl-dir_col">
+                            <a href="#">About Us</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Data Processing Addendum</a>
+                        </div>
+                    </div>
+
+                    <button class="collapsible">Resources</button>
+                    <div class="content">
+                        <div class="anchor-block f-sz16 d-flex fl-dir_col">
+                            <a href="#">Blog</a>
+                            <a href="#">Template Gallery</a>
+                            <a href="#">Podcast</a>
+                            <a href="#">Documentation</a>
+                            <a href="#">Security</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="footer__social d-flex jst-content_sb">
                     <p class="cpr-txt">Copyright © 2022 Sprig. All Rights Reserved.</p>
                     <div class="soc-networks d-flex">
@@ -343,5 +467,7 @@
         </div>
     </footer>
 </div>
+
+<script src="js/app.js"></script>
 </body>
 </html>

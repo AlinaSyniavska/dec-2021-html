@@ -1,5 +1,5 @@
 :root {
-    --black-color: #0B2330;
+    --black-base-color: #0B2330;
     --orange-color: #F9C600;
     --lime-color: #51CEBC;
     --purple-color: #BD78F0;
@@ -10,6 +10,18 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.fl-mobile {
+    display: none;
 }
 
 .bnt_hover:hover {
@@ -99,14 +111,27 @@
 /*------------*/
 
 .temp-body {
-    /*width: 100%;*/
     width: 1440px;
+    /*width: 1470px;*/
+    /*padding: 0 15px;*/
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
     width: 100%;
     height: 83px;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 170px;
+
+    /*overflow: hidden;*/
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
 }
 
 .wrap1 {
@@ -119,30 +144,83 @@
 }
 
 .header__nav {
-    column-gap: 56px;
+    flex-grow: 1;
 }
 
-.header__nav > a {
-    text-decoration: none;
-    color: var(--black-color);
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.ch-mark {
-    color: #000;
+.navbar__item {
+    box-sizing: border-box;
+    text-align: center;
+
+    line-height: 83px;
+    vertical-align: center;
+    /*flex: 1 1 20%;*/
+    flex: 1 1 auto;
+
     position: relative;
 }
 
-.ch-mark::after {
-    content: "\02C7";
-    color: #000;
-    font-weight: bold;
-    font-size: 32px;
+.navbar__item > a {
+    text-decoration: none;
+    color: var(--black-base-color);
+}
+.navbar__item > a > i{
+    padding-left: 5px;
+}
+.navbar__item:hover {
+    cursor: pointer;
+    background: #E7EAEB;
+    color: black;
+}
+/*--------------------------------*/
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+    display: none;
     position: absolute;
-    top: 50%;
-    margin-left: 8px;
+
+    top: 100%;
+    left: 0;
+
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+    color: black;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Добавить серый цвет фона для выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {
+    background-color: #E7EAEB;
+    color: #818181;
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.navbar__item:hover .dropdown-content {
+    display: block;
+}
+/*--------------------------------*/
+
 .header__btn {
+    justify-content: space-between;
+    align-items: center;
     column-gap: 24px;
 }
 
@@ -152,19 +230,21 @@
 
 .btn-anchor > a {
     text-decoration: none;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .btn-start {
     width: 163px;
     height: 54px;
-    background: var(--black-color);
+    background: var(--black-base-color);
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
+/*--------------------------*/
 .main {
+    margin-top: 83px;
     width: 100%;
 }
 
@@ -175,7 +255,6 @@
 .section1__content {
     margin-top: 154px;
     row-gap: 32px;
-
 }
 
 .section1__title {
@@ -183,7 +262,7 @@
     font-size: 60px;
     line-height: 64px;
     letter-spacing: 0.6px;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .section1__txt {
@@ -204,18 +283,19 @@
 
 .s1-btn-start {
     background: var(--orange-color);
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .s1-btn-talk {
     color: #000000;
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--black-base-color);
 }
 
 .section1__img > .child {
     right: 102px;
 }
 
+/*-------------------*/
 .section2 {
     width: 100%;
     row-gap: 59px;
@@ -223,18 +303,21 @@
 }
 
 .section2__title {
-    color: var(--black-color);
+    color: var(--black-base-color);
     width: 50%;
     text-align: center;
 }
 
 .section2__logos {
     width: 1143px;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     row-gap: 16px;
     column-gap: 83px;
 }
 
+/*-------------------*/
 .section3 {
     margin-top: 192px;
     width: 100%;
@@ -257,8 +340,10 @@
 
 .section3__title,
 .section3__txt {
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
+
+/*-------------------*/
 
 .section4 {
     margin-top: 191px;
@@ -266,13 +351,15 @@
 }
 
 .section4__title {
-    color: var(--black-color);
+    color: var(--black-base-color);
     width: 50%;
 }
 
 .section4__img {
     margin: 57px 0 113px 0;
 }
+
+/*-------------------*/
 
 .section5 {
     margin-top: 160px;
@@ -282,7 +369,7 @@
 }
 
 .section5__content {
-    color: var(--black-color);
+    color: var(--black-base-color);
     margin: 106px 116px 123px 0;
     width: 45%;
     row-gap: 39px;
@@ -291,6 +378,8 @@
 .section5 > .child {
     left: -116px;
 }
+
+/*-------------------*/
 
 .section6 {
     margin-top: 136px;
@@ -306,13 +395,15 @@
 
 .section6__title {
     margin-top: 13px;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .section6__txt {
     margin-top: 26px;
     color: var(--grey-color);
 }
+
+/*-------------------*/
 
 .section7 {
     margin-top: 225px;
@@ -329,7 +420,7 @@
 }
 
 .card__title {
-    color: var(--black-color);
+    color: var(--black-base-color);
     margin-top: 23px;
 }
 
@@ -343,7 +434,7 @@
     width: 144px;
     height: 54px;
     color: #000;
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--black-base-color);
     border-radius: 5px;
     background: #fff;
 }
@@ -368,8 +459,10 @@
 
 .btn-card:last-of-type {
     background: #FE9F28;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
+
+/*-------------------*/
 
 .section8 {
     margin-top: 148px;
@@ -390,7 +483,7 @@
     font-size: 60px;
     line-height: 64px;
     letter-spacing: 0.6px;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .section8_bottom {
@@ -410,7 +503,7 @@
     box-sizing: border-box;
     border-top: 2px solid #C3CACD;
     padding: 25px 0 22px;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .accordion-block:first-of-type {
@@ -458,7 +551,7 @@
 
 .accordion__anchor > p,
 .accordion__anchor a {
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .accordion__anchor a {
@@ -466,13 +559,15 @@
     font-size: 28px;
 }
 
+/*-------------------*/
+
 .section9 {
     margin-top: 160px;
     column-gap: 185px;
 }
 
 .section9__content {
-    color: var(--black-color);
+    color: var(--black-base-color);
     row-gap: 37px;
 }
 
@@ -487,6 +582,8 @@
 .section9__img > img {
     margin-right: -32px;
 }
+
+/*-------------------*/
 
 .section10 {
     margin-top: 240px;
@@ -509,7 +606,8 @@
     row-gap: 81px;
     color: #000;
 }
-.quotes{
+
+.quotes {
     position: absolute;
     top: 0;
     left: 0;
@@ -518,7 +616,7 @@
 .section10__container {
     box-sizing: border-box;
     padding: 80px 121px 104px 116px;
-    color: var(--black-color);
+    color: var(--black-base-color);
 }
 
 .section10__title {
@@ -531,30 +629,37 @@
 
 .section10 .s1-btn-start {
     background: transparent;
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--black-base-color);
 }
-.section10__card{
+
+.section10__card {
     column-gap: 24px;
 }
-.user-info{
+
+.user-info {
     color: var(--grey-color);
 }
 
-.footer{
+/*-------------------*/
+
+.footer {
     width: 100%;
     margin-top: 46px;
-    background: var(--black-color);
+    background: var(--black-base-color);
 
     color: #fff;
 }
-.f-sec1{
+
+.f-sec1 {
+    justify-content: center;
     box-sizing: border-box;
     border-bottom: 1px solid var(--grey-color);
     border-radius: 0;
 }
 
-.footer__content{
+.footer__content {
     margin: 53px 0 97px;
+    align-items: center;
     row-gap: 33px;
     width: 50%;
     text-align: center;
@@ -567,48 +672,144 @@
     transition: box-shadow .5s;
 }
 
-.f-sec2{
+/*-------------------*/
+
+.f-sec2 {
     margin-top: 80px;
     margin-bottom: 220px;
     column-gap: 109px;
 }
-.footer__contacts{
+
+.footer__contacts {
     row-gap: 68px;
     width: 100%;
 }
-.footer__anchors{
+
+.footer__anchors {
     column-gap: 40px;
 }
-.anchor-block{
+
+.anchor-block {
     row-gap: 14px;
     width: 196px;
 }
 
-.anchor-block>h6{
+.anchor-block > h6 {
     color: var(--orange-color);
 }
 
-.anchor-block>a{
+.anchor-block > a {
     color: #94A0A4;
     text-decoration: none;
 }
-.cpr-txt{
+
+.cpr-txt {
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: #94A0A4;
 }
-.footer__social{
+
+.footer__social {
     margin-right: 150px;
 }
-.soc-networks{
+
+.soc-networks {
     column-gap: 24px;
     font-size: 18px;
 }
 
-.soc-networks>div{
+.soc-networks > div {
     width: 28px;
     height: 28px;
     background: #94A0A4;
     border-radius: 50%;
+    cursor: pointer;
 }
+/*MOBILE MENU*/
+/* Наложение (фон) */
+.overlay {
+    /* Высота и ширина зависят от того, как вы хотите показать наложение (см. JS ниже) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Черный резервный цвет */
+    background-color: rgba(0, 0, 0, 0.9); /*Черный с непрозрачностью */
+    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+    transition: 0.5s; /* 0.5 секунды эффект перехода, чтобы скользить в или скользить вниз по наложению (высота или ширина, в зависимости от показа) */
+}
+
+/* Расположите содержимое внутри наложения */
+.overlay-content {
+    position: relative;
+    top: 15%; /* 25% сверху */
+    width: 100%; /* 100% ширина */
+    text-align: center; /* Центрированный текст/ссылки */
+    margin-top: 30px; /* 30px верхнее поле, чтобы избежать конфликта с кнопкой закрытия на небольших экранах */
+}
+
+/* Навигационные ссылки внутри наложения */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Блок дисплея вместо встроенного */
+    transition: 0.3s; /* Эффекты перехода при наведении (цвет) */
+}
+
+/* При наведении курсора мыши на навигационные ссылки измените их цвет */
+.overlay a:hover, .overlay a:focus,
+.navbar__item> a:hover, .navbar__item>a:focus {
+    color: #818181;
+}
+
+/* Расположите кнопку закрыть (верхний правый угол) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/*--------------------*/
+/*ACCORDION FOOTER*/
+.collapsible {
+    background-color: #777;
+    color: var(--orange-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-bottom: 2px solid var(--orange-color);
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--black-base-color);
+}
+
+
